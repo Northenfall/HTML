@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Практика 7 работа 3</title>
+</head>
+
+<body>
+    <input type="text" size="19" onfocus="func(this)" value="opa">
+    <br>
+
+    <button id="first" onclick="block()">first</button>
+    <br>
+    <button onclick="unblock()" id="second">second</button>
+    <br>
+    <input type="submit" onclick="plus(this)" value="0" id="plus">
+    <script>
+        function func(elem) {
+            elem.value = "a";
+
+        }
+
+        function block() {
+            let elem = document.getElementById('first');
+            elem.disabled = true;
+        }
+
+        function unblock() {
+            let elem = document.getElementById('first');
+            elem.disabled = false;
+        }
+
+        function plus() {
+            let elem = document.getElementById('plus');
+            elem.value++;
+        }
+    </script>
+
+   
+</body></html>

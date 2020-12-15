@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Практика 7 работа 2</title>
+</head>
+
+<body>
+   
+    <input type="text" size="19" id="pole" placeholder="opa">
+    <br>
+    <br>
+    <button onclick="func()">Кнопка с текстом</button>
+
+    <br>
+    <br>
+
+    <img src="image/gelik.jpg" width="500" height="255" alt="lorem" id="photo">
+    <br>
+    <button onclick="photo()">Фото</button>
+    <script>
+        function func() {
+            let elem = document.getElementById('pole');
+            elem.placeholder = "a";
+        }
+
+        function photo() {
+            let elem = document.getElementById('photo');
+            elem.src = "image/car.jpg";
+        }
+    </script>
+
+</body></html>

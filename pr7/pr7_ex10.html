@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>Задание 10 работа 7</title>
+</head>
+
+<body>
+    <div style="padding: 10px 20px 10px; position: relative;" class="cross">
+        <h3>BMW</h3>
+        <p>BMW - немецкая компания, которая выпускает автомобили и мотоциклы премиум класса. Eе штаб-квартира расположена в городе Мюнхен, а история начинается в 1917 году, когда Карл Рапп и Густав Отто основывают собственный завод по выпуску авиадвигателей Bayerische Motoren Werke – BMW.</p>
+    </div>
+    <div style="padding: 10px 20px 10px; position: relative;" class="cross">
+        <h3>Audi</h3>
+        <p>Компания Audi является немецким производителем автомобилей, которые сочетают в себе изысканный дизайн и современные технологии. Её штаб-квартира расположена в городе Ингольдштадте. В 1909 году начинается история этого автомобильного гиганта, когда Август Хорьх организовал фирму по производству машин.</p>
+    </div>
+    <div style="padding: 10px 20px 10px; position: relative;" class="cross">
+        <h3>Bentley</h3>
+        <p>Компания Bentley является английским производителем автомобилей класса люкс. За годы своего существования она создала имидж самой престижной и дорогой марки мира.</p>
+    </div>
+
+</body>
+<script>
+    let panes = document.querySelectorAll('.cross');
+
+    for (let cross of panes) {
+        cross.insertAdjacentHTML("afterbegin", '<button style=" position: absolute;   top: 0;right: 10px;display: block;" class="remove-button">[x]</button>');
+        cross.firstChild.onclick = () => cross.remove();
+    }
+</script>
+</body></html>

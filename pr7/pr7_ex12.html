@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Задание 12 работа 7</title>
+	</head>
+
+<body>
+
+  <ul class="tree" id="tree">
+    <li>Текст
+      <ul>
+        <li>один
+          <ul>
+            <li>Два</li>
+            <li>Три</li>
+            <li>Четыре</li>
+          </ul>
+        </li>
+        <li>Пять 
+          <ul>
+            <li>Шесть </li>
+            <li>Семь</li>
+            <li>Восемь</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Девять
+      <ul>
+        <li>Десять
+          <ul>
+            <li>Одиннадцать</li>
+            <li>Двенадцать</li>
+            <li>Тринадцать</li>
+            <li>Четырнадцать</li>
+          </ul>
+        </li>
+        <li>Пятнадцать
+          <ul>
+            <li>Шестнадцать</li>
+          </ul>
+        </li>
+        <li>Семнадцать
+          <ul>
+            <li>Восемнадцать</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <script>
+    for (let li of tree.querySelectorAll('li')) {
+      let span = document.createElement('span');
+      li.prepend(span);
+      span.append(span.nextSibling); 
+    }
+
+
+    tree.onclick = function(event) {
+
+      if (event.target.tagName != 'SPAN') {
+        return;
+      }
+
+      var childrenContainer = event.target.parentNode.querySelector('ul');
+      if (!childrenContainer) return; 
+
+      childrenContainer.hidden = !childrenContainer.hidden;
+    }
+  </script>
+
+</body>
+</html>
