@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Практика 8 работа 1</title>
+    <style>
+        #image {
+            position: relative;
+            width: 250px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <img src="image/car.jpg" id="image">
+        <br>
+
+
+        <script>
+            image.onclick = function() {
+                let start = Date.now();
+                let timer = setInterval(function() {
+
+                    let timePassed = Date.now() - start;
+                    if (timePassed >= 2000) {
+                        window.clearInterval(timer);
+                    } else {
+                        image.style.left = timePassed / 5 + 'px';
+                    }
+                }, 20);
+            }
+
+        </script>
+</body>
+
+</html>
